@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		03F04D4051AD20D5E498D9C6 /* Pods_Buzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94C1D066145D236B3A3E118 /* Pods_Buzz.framework */; };
 		8B05BC3C1E40918000957342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05BC3B1E40918000957342 /* AppDelegate.swift */; };
-		8B05BC3E1E40918000957342 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05BC3D1E40918000957342 /* ViewController.swift */; };
 		8B05BC411E40918000957342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B05BC3F1E40918000957342 /* Main.storyboard */; };
 		8B05BC431E40918000957342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05BC421E40918000957342 /* Assets.xcassets */; };
 		8B05BC461E40918000957342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B05BC441E40918000957342 /* LaunchScreen.storyboard */; };
+		8BA8A8D21E4093580019A68B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8A8D11E4093580019A68B /* PlayerView.swift */; };
+		8BA8A8D41E4093D80019A68B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8A8D31E4093D80019A68B /* UIViewExtensions.swift */; };
+		8BEE35151E410F8F00A09EEF /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE35141E410F8F00A09EEF /* VideoListViewController.swift */; };
+		8BEE35171E41112500A09EEF /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE35161E41112500A09EEF /* Video.swift */; };
+		8BEE35191E41116E00A09EEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE35181E41116E00A09EEF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		354225354EAC7618F21D2746 /* Pods-Buzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buzz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buzz/Pods-Buzz.release.xcconfig"; sourceTree = "<group>"; };
 		8B05BC381E40918000957342 /* Buzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B05BC3B1E40918000957342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B05BC3D1E40918000957342 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B05BC401E40918000957342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B05BC421E40918000957342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B05BC451E40918000957342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B05BC471E40918000957342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BA8A8D11E4093580019A68B /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		8BA8A8D31E4093D80019A68B /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		8BEE35141E410F8F00A09EEF /* VideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
+		8BEE35161E41112500A09EEF /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		8BEE35181E41116E00A09EEF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A55515F0C8DFCA2EA943C318 /* Pods-Buzz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buzz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buzz/Pods-Buzz.debug.xcconfig"; sourceTree = "<group>"; };
 		A94C1D066145D236B3A3E118 /* Pods_Buzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,13 +79,49 @@
 			isa = PBXGroup;
 			children = (
 				8B05BC3B1E40918000957342 /* AppDelegate.swift */,
-				8B05BC3D1E40918000957342 /* ViewController.swift */,
-				8B05BC3F1E40918000957342 /* Main.storyboard */,
 				8B05BC421E40918000957342 /* Assets.xcassets */,
-				8B05BC441E40918000957342 /* LaunchScreen.storyboard */,
+				8BA8A8CB1E4093400019A68B /* Controllers */,
+				8BA8A8CD1E4093400019A68B /* Extensions */,
 				8B05BC471E40918000957342 /* Info.plist */,
+				8B05BC441E40918000957342 /* LaunchScreen.storyboard */,
+				8B05BC3F1E40918000957342 /* Main.storyboard */,
+				8BA8A8CE1E4093400019A68B /* Model */,
+				8BA8A8CF1E4093400019A68B /* Views */,
 			);
 			path = Buzz;
+			sourceTree = "<group>";
+		};
+		8BA8A8CB1E4093400019A68B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BEE35141E410F8F00A09EEF /* VideoListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8BA8A8CD1E4093400019A68B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BA8A8D31E4093D80019A68B /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BA8A8CE1E4093400019A68B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BEE35181E41116E00A09EEF /* User.swift */,
+				8BEE35161E41112500A09EEF /* Video.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BA8A8CF1E4093400019A68B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BA8A8D11E4093580019A68B /* PlayerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C1A7CBEE4B0FCFF940FB9831 /* Frameworks */ = {
@@ -211,8 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B05BC3E1E40918000957342 /* ViewController.swift in Sources */,
+				8BA8A8D21E4093580019A68B /* PlayerView.swift in Sources */,
+				8BA8A8D41E4093D80019A68B /* UIViewExtensions.swift in Sources */,
+				8BEE35191E41116E00A09EEF /* User.swift in Sources */,
+				8BEE35151E410F8F00A09EEF /* VideoListViewController.swift in Sources */,
 				8B05BC3C1E40918000957342 /* AppDelegate.swift in Sources */,
+				8BEE35171E41112500A09EEF /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -322,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
