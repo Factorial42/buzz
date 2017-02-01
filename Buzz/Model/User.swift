@@ -6,8 +6,9 @@
 //  Copyright © 2017 Factorial42. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct User {
     let name: String
+    let image: UIImage
 }

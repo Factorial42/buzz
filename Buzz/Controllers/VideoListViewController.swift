@@ -9,14 +9,20 @@
 import UIKit
 
 class VideoListViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
     
-    var videos: [Video]!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.tableHeaderView = UIView()
+            tableView.tableFooterView = UIView()
+        }
+    }
+    
+//    var videos: [Video]!
+    var videos = [Video]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
