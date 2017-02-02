@@ -1,12 +1,35 @@
 PODS:
+  - Alamofire (4.3.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
+  - Fakery (2.0.0)
+  - GradientView (2.2.0)
   - Player (0.4.0)
+  - SwifterSwift (1.5)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.3)
+  - AlamofireImage (~> 3.2)
+  - Crashlytics (~> 3.8)
+  - Fabric (~> 1.6)
+  - Fakery (~> 2.0)
+  - GradientView (~> 2.2)
   - Player (~> 0.4)
+  - SwifterSwift (~> 1.5)
 
 SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
+  GradientView: a5397174594f158dc1511127f2004ec25c9d2300
   Player: 18ab82303fc17500413710b21ff44b7d0f7c39bb
+  SwifterSwift: c612befa8e51b4092d3b41e88cd93f52d0624d9f
 
-PODFILE CHECKSUM: a341f7d75cce1e15028fdbc8384d86707bdd686e
+PODFILE CHECKSUM: b331377cecfd3a6308eeafea2012efeca3ee8a43
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.0

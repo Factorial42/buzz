@@ -9,6 +9,11 @@
 import Foundation
 
 struct Video {
+    let id: String
+    let caption: String
+    let location: String
     let url: URL
+    // let filter: String
+    // let tags: [String]
     let user: User
 }

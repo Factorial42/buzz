@@ -9,6 +9,9 @@
 import UIKit
 
 struct User {
-    let name: String
-    let image: UIImage
+    let id: String
+    let username: String
+    let fullName: String
+    let bio: String
+    let profilePicture: URL
 }

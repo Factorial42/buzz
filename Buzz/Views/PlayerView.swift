@@ -7,25 +7,16 @@
 //
 
 import Player
-import AVFoundation
 
 class PlayerView: UIView {
     
     lazy var player: Player = { [unowned self] in
         let player = Player()
         player.delegate = self
-        self.addSubview(player.view)
+        self.insertSubview(player.view, at: 0)
         player.view.constrainToEdges()
         return player
     }()
-    
-    func configure(muted: Bool) {
-        try! AVAudioSession.sharedInstance().setCategory(muted ? AVAudioSessionCategoryAmbient : AVAudioSessionCategoryPlayback)
-        try! AVAudioSession.sharedInstance().setActive(true)
-        player.fillMode = AVLayerVideoGravityResizeAspectFill
-        player.playbackLoops = true
-        player.muted = muted
-    }
     
 }
 

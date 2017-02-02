@@ -10,42 +10,46 @@ import UIKit
 
 class VideoListViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.tableHeaderView = UIView()
-            tableView.tableFooterView = UIView()
-        }
-    }
+    @IBOutlet weak var collectionView: UICollectionView!
     
 //    var videos: [Video]!
-    var videos = [Video]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
+    let videos = Dummy.sharedInstance.makeVideos()
     
 }
 
-// MARK: - UITableViewDataSource
-extension VideoListViewController: UITableViewDataSource {
+// MARK: - UICollectionViewDataSource
+extension VideoListViewController: UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videos.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: VideoCollectionViewCell.self), for: indexPath) as! VideoCollectionViewCell
+        cell.configure(with: videos[indexPath.item])
+        return cell
     }
     
 }
 
-// MARK: - UITableViewDelegate
-extension VideoListViewController: UITableViewDelegate {
+// MARK: - UICollectionViewDelegate
+extension VideoListViewController: UICollectionViewDelegate {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        (cell as? VideoCollectionViewCell)?.playerView.player.playFromBeginning()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        (cell as? VideoCollectionViewCell)?.playerView.player.pause()
+    }
+    
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension VideoListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return collectionView.frame.size
     }
     
 }

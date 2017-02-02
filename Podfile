@@ -6,5 +6,12 @@ target 'Buzz' do
   use_frameworks!
 
   # Pods for Buzz
+  pod 'Fabric', '~> 1.6'
+  pod 'Crashlytics', '~> 3.8'
   pod 'Player', '~> 0.4'
+  pod 'SwifterSwift', '~> 1.5'
+  pod 'Fakery', '~> 2.0'
+  pod 'Alamofire', '~> 4.3'
+  pod 'AlamofireImage', '~> 3.2'
+  pod 'GradientView', '~> 2.2'
 end
