@@ -14,4 +14,6 @@ target 'Buzz' do
   pod 'Alamofire', '~> 4.3'
   pod 'AlamofireImage', '~> 3.2'
   pod 'GradientView', '~> 2.2'
+  # pod 'HBRecorder', '~> 1.0'
+  pod 'HBRecorder', :git => 'https://github.com/efremidze/HBRecorder.git'
 end

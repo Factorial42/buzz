@@ -30,3 +30,19 @@ extension UIView {
     
 }
 
+extension UIViewController {
+    
+    func add(_ viewController: UIViewController) {
+        viewController.willMove(toParentViewController: self)
+        self.addChildViewController(viewController)
+        self.view.addSubview(viewController.view)
+        viewController.didMove(toParentViewController: self)
+    }
+    
+    func remove() {
+        self.willMove(toParentViewController: nil)
+        self.view.removeFromSuperview()
+        self.removeFromParentViewController()
+    }
+    
+}
