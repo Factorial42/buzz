@@ -17,6 +17,8 @@
 		8B8F6AEC1E413E9F00F6C6CC /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F6AEB1E413E9F00F6C6CC /* UIStoryboardExtensions.swift */; };
 		8BA8A8D21E4093580019A68B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8A8D11E4093580019A68B /* PlayerView.swift */; };
 		8BA8A8D41E4093D80019A68B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8A8D31E4093D80019A68B /* UIViewExtensions.swift */; };
+		8BB6C5F71E5D35D400A307B2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6C5F61E5D35D400A307B2 /* SearchViewController.swift */; };
+		8BB6C5F91E5D36EB00A307B2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6C5F81E5D36EB00A307B2 /* NavigationController.swift */; };
 		8BD4E7041E430C2E00974D4F /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4E7031E430C2E00974D4F /* VideoCollectionViewCell.swift */; };
 		8BEE35151E410F8F00A09EEF /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE35141E410F8F00A09EEF /* VideoListViewController.swift */; };
 		8BEE35171E41112500A09EEF /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE35161E41112500A09EEF /* Video.swift */; };
@@ -37,6 +39,8 @@
 		8B8F6AEB1E413E9F00F6C6CC /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		8BA8A8D11E4093580019A68B /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		8BA8A8D31E4093D80019A68B /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		8BB6C5F61E5D35D400A307B2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8BB6C5F81E5D36EB00A307B2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		8BD4E7031E430C2E00974D4F /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BEE35141E410F8F00A09EEF /* VideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		8BEE35161E41112500A09EEF /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				8B1820561E5D1867003B4EA4 /* CameraViewController.swift */,
+				8BB6C5F81E5D36EB00A307B2 /* NavigationController.swift */,
+				8BB6C5F61E5D35D400A307B2 /* SearchViewController.swift */,
 				8B8F6AE91E41387A00F6C6CC /* TabBarController.swift */,
 				8BEE35141E410F8F00A09EEF /* VideoListViewController.swift */,
 			);
@@ -299,7 +305,9 @@
 				8BEE35191E41116E00A09EEF /* User.swift in Sources */,
 				8BEE35151E410F8F00A09EEF /* VideoListViewController.swift in Sources */,
 				8B8F6AEA1E41387A00F6C6CC /* TabBarController.swift in Sources */,
+				8BB6C5F71E5D35D400A307B2 /* SearchViewController.swift in Sources */,
 				8B05BC3C1E40918000957342 /* AppDelegate.swift in Sources */,
+				8BB6C5F91E5D36EB00A307B2 /* NavigationController.swift in Sources */,
 				8B8F6AEC1E413E9F00F6C6CC /* UIStoryboardExtensions.swift in Sources */,
 				8BEEB4FD1E430408005DF7B8 /* Dummy.swift in Sources */,
 				8BD4E7041E430C2E00974D4F /* VideoCollectionViewCell.swift in Sources */,

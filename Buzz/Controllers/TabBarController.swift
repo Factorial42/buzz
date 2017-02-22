@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
         self.tabBar.tintColor = .black
         //self.tabBar.unselectedItemTintColor = .black
         
-        let items = [Item(viewController: VideoListViewController.instantiate(), image: UIImage(named: "home"), selectedImage: UIImage(named: "home-filled")), Item(viewController: UIViewController(), image: UIImage(named: "search"), selectedImage: UIImage(named: "search-filled")), Item(viewController: UINavigationController(rootViewController: CameraViewController.instantiate()), image: UIImage(named: "camera"), selectedImage: UIImage(named: "camera-filled")), Item(viewController: UIViewController(), image: UIImage(named: "user"), selectedImage: UIImage(named: "user-filled"))]
+        let items = [Item(viewController: NavigationController(rootViewController: VideoListViewController.instantiate()), image: UIImage(named: "home"), selectedImage: UIImage(named: "home-filled")), Item(viewController: NavigationController(rootViewController: SearchViewController.instantiate()), image: UIImage(named: "search"), selectedImage: UIImage(named: "search-filled")), Item(viewController: NavigationController(rootViewController: CameraViewController.instantiate()), image: UIImage(named: "camera"), selectedImage: UIImage(named: "camera-filled")), Item(viewController: NavigationController(rootViewController: UIViewController()), image: UIImage(named: "user"), selectedImage: UIImage(named: "user-filled"))]
         self.viewControllers = items.map { $0.viewController }
         items.forEach {
             let item = UITabBarItem(title: nil, image: $0.image?.withRenderingMode(.alwaysOriginal), selectedImage: $0.selectedImage?.withRenderingMode(.alwaysOriginal))
