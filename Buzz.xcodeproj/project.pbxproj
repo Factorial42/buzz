@@ -13,6 +13,9 @@
 		8B05BC431E40918000957342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05BC421E40918000957342 /* Assets.xcassets */; };
 		8B05BC461E40918000957342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B05BC441E40918000957342 /* LaunchScreen.storyboard */; };
 		8B1820571E5D1867003B4EA4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1820561E5D1867003B4EA4 /* CameraViewController.swift */; };
+		8B5E43241E66241500161446 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E43231E66241500161446 /* Location.swift */; };
+		8B5E43261E66248B00161446 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E43251E66248B00161446 /* Tag.swift */; };
+		8B5E43281E66273800161446 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E43271E66273800161446 /* Comment.swift */; };
 		8B8F6AEA1E41387A00F6C6CC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F6AE91E41387A00F6C6CC /* TabBarController.swift */; };
 		8B8F6AEC1E413E9F00F6C6CC /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F6AEB1E413E9F00F6C6CC /* UIStoryboardExtensions.swift */; };
 		8BA8A8D21E4093580019A68B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8A8D11E4093580019A68B /* PlayerView.swift */; };
@@ -35,6 +38,9 @@
 		8B05BC451E40918000957342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B05BC471E40918000957342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1820561E5D1867003B4EA4 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		8B5E43231E66241500161446 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8B5E43251E66248B00161446 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		8B5E43271E66273800161446 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8B8F6AE91E41387A00F6C6CC /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8B8F6AEB1E413E9F00F6C6CC /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		8BA8A8D11E4093580019A68B /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 		8BA8A8CE1E4093400019A68B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B5E43271E66273800161446 /* Comment.swift */,
+				8B5E43231E66241500161446 /* Location.swift */,
+				8B5E43251E66248B00161446 /* Tag.swift */,
 				8BEE35181E41116E00A09EEF /* User.swift */,
 				8BEE35161E41112500A09EEF /* Video.swift */,
 			);
@@ -305,11 +314,14 @@
 				8BEE35191E41116E00A09EEF /* User.swift in Sources */,
 				8BEE35151E410F8F00A09EEF /* VideoListViewController.swift in Sources */,
 				8B8F6AEA1E41387A00F6C6CC /* TabBarController.swift in Sources */,
+				8B5E43241E66241500161446 /* Location.swift in Sources */,
 				8BB6C5F71E5D35D400A307B2 /* SearchViewController.swift in Sources */,
 				8B05BC3C1E40918000957342 /* AppDelegate.swift in Sources */,
 				8BB6C5F91E5D36EB00A307B2 /* NavigationController.swift in Sources */,
 				8B8F6AEC1E413E9F00F6C6CC /* UIStoryboardExtensions.swift in Sources */,
+				8B5E43281E66273800161446 /* Comment.swift in Sources */,
 				8BEEB4FD1E430408005DF7B8 /* Dummy.swift in Sources */,
+				8B5E43261E66248B00161446 /* Tag.swift in Sources */,
 				8BD4E7041E430C2E00974D4F /* VideoCollectionViewCell.swift in Sources */,
 				8BEE35171E41112500A09EEF /* Video.swift in Sources */,
 			);
