@@ -22,12 +22,16 @@ struct Dummy {
     
     func makeVideo() -> Video {
         let url = ["https://v.cdn.vine.co/r/videos/AA3C120C521177175800441692160_38f2cbd1ffb.1.5.13763579289575020226.mp4", "http://techslides.com/demos/sample-videos/small.mp4"].randomItem.url!
-        return Video(id: faker.number.randomInt().description, caption: faker.company.name(), location: faker.address.city() + ", " + faker.address.country(), url: url, user: makeUser())
+        return Video(id: faker.number.randomInt().description, caption: faker.company.name(), url: url, user: makeUser(), location: makeLocation())
     }
     
     func makeUser() -> User {
         let url = "https://unsplash.it/100?random".url!
         return User(id: faker.number.randomInt().description, username: faker.internet.username(), fullName: faker.name.name(), bio: faker.lorem.sentence(), profilePicture: url)
+    }
+    
+    func makeLocation() -> Location {
+        return Location(id: faker.number.randomInt().description, name: faker.company.name(), latitude: faker.address.latitude(), longitude: faker.address.longitude())
     }
     
 }
