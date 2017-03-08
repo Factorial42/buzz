@@ -171,8 +171,25 @@
                     <view key="view" contentMode="scaleToFill" id="nht-Sm-s9V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DFc-tv-b2P">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tqP-Cc-uig"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DFc-tv-b2P" secondAttribute="trailing" id="4wb-O4-de9"/>
+                            <constraint firstItem="DFc-tv-b2P" firstAttribute="leading" secondItem="nht-Sm-s9V" secondAttribute="leading" id="9fE-w4-FWj"/>
+                            <constraint firstItem="DFc-tv-b2P" firstAttribute="top" secondItem="Mv8-FE-chW" secondAttribute="bottom" id="bdq-2Z-4eL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="DFc-tv-b2P" id="NH3-d4-NzJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCg-hG-O47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

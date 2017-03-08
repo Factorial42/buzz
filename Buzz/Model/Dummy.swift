@@ -16,8 +16,8 @@ struct Dummy {
     
     let faker = Faker()
     
-    func makeVideos() -> [Video] {
-        return (0...5).map { _ in makeVideo() }
+    func makeVideos(_ limit: Int) -> [Video] {
+        return (0...limit).map { _ in makeVideo() }
     }
     
     func makeVideo() -> Video {
@@ -32,6 +32,17 @@ struct Dummy {
     
     func makeLocation() -> Location {
         return Location(id: faker.number.randomInt().description, name: faker.company.name(), latitude: faker.address.latitude(), longitude: faker.address.longitude())
+    }
+    
+    func makeTag() -> Tag {
+        return Tag(name: faker.lorem.word(), mediaCount: faker.number.randomInt())
+    }
+    
+    func makeSearchResults(_ limit: Int) -> [SearchResultProtocol] {
+        let users: [SearchResultProtocol] = (0...limit).map { _ in makeUser() }
+        let locations: [SearchResultProtocol] = (0...limit).map { _ in makeLocation() }
+        let tags: [SearchResultProtocol] = (0...limit).map { _ in makeTag() }
+        return users + locations + tags
     }
     
 }

@@ -44,7 +44,7 @@ class VideoCollectionViewCell: UICollectionViewCell {
     func configure(with video: Video) {
         playerView.player.url = video.url
         textLabel.text = video.caption
-        detailTextLabel.text = video.location
+        detailTextLabel.text = video.location.name
         userView.imageView.af_setImage(withURL: video.user.profilePicture)
         userView.textLabel.text = video.user.username
     }

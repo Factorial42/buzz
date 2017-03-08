@@ -13,7 +13,7 @@ class VideoListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
 //    var videos: [Video]!
-    let videos = Dummy.sharedInstance.makeVideos()
+    let videos = Dummy.sharedInstance.makeVideos(5)
     
 }
 
