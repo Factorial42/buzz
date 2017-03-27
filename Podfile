@@ -16,4 +16,5 @@ target 'Buzz' do
   pod 'GradientView', '~> 2.2'
   # pod 'HBRecorder', '~> 1.0'
   pod 'HBRecorder', :git => 'https://github.com/efremidze/HBRecorder.git'
+  pod 'Magnetic', '~> 1.0'
 end

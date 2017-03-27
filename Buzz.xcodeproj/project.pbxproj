@@ -28,6 +28,7 @@
 		8BEE35171E41112500A09EEF /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE35161E41112500A09EEF /* Video.swift */; };
 		8BEE35191E41116E00A09EEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE35181E41116E00A09EEF /* User.swift */; };
 		8BEEB4FD1E430408005DF7B8 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEB4FC1E430408005DF7B8 /* Dummy.swift */; };
+		8BF8E7BC1E89C39100C0D385 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8E7BB1E89C39100C0D385 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		8BEE35161E41112500A09EEF /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		8BEE35181E41116E00A09EEF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8BEEB4FC1E430408005DF7B8 /* Dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dummy.swift; path = ../Model/Dummy.swift; sourceTree = "<group>"; };
+		8BF8E7BB1E89C39100C0D385 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A55515F0C8DFCA2EA943C318 /* Pods-Buzz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buzz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buzz/Pods-Buzz.debug.xcconfig"; sourceTree = "<group>"; };
 		A94C1D066145D236B3A3E118 /* Pods_Buzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 			children = (
 				8B8F6AEB1E413E9F00F6C6CC /* UIStoryboardExtensions.swift */,
 				8BA8A8D31E4093D80019A68B /* UIViewExtensions.swift */,
+				8BF8E7BB1E89C39100C0D385 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1820571E5D1867003B4EA4 /* CameraViewController.swift in Sources */,
+				8BF8E7BC1E89C39100C0D385 /* Extensions.swift in Sources */,
 				8BA8A8D21E4093580019A68B /* PlayerView.swift in Sources */,
 				8BA8A8D41E4093D80019A68B /* UIViewExtensions.swift in Sources */,
 				8BEE35191E41116E00A09EEF /* User.swift in Sources */,

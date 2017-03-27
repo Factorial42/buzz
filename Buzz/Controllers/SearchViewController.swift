@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import Magnetic
 
 class SearchViewController: UIViewController {
     
@@ -21,20 +22,59 @@ class SearchViewController: UIViewController {
         }
     }
     
-    let operationQueue: OperationQueue = {
-        let operationQueue = OperationQueue()
-        operationQueue.maxConcurrentOperationCount = 1
-        return operationQueue
+    @IBOutlet weak var skView: SKView! {
+        didSet {
+            _ = scene
+        }
+    }
+    
+    lazy var scene: Magnetic = { [unowned self] in
+        let scene = Magnetic(size: self.skView.bounds.size)
+        self.skView.presentScene(scene)
+        return scene
     }()
     
     let results = Dummy.sharedInstance.makeSearchResults(5)
-    
-    var filteredResults = [String]()
+    var filtered = [SearchResultProtocol]() {
+        didSet {
+            let old = oldValue.filter { value in !filtered.contains { $0.name == value.name } }
+            let new = filtered.filter { value in !oldValue.contains { $0.name == value.name } }
+            DispatchQueue.main.async { [unowned self] in
+                self.reload(old: old, new: new)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        filtered = results
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        reload(old: [], new: filtered)
+    }
+    
+}
 
-        // Do any additional setup after loading the view.
+// MARK: - Data
+extension SearchViewController {
+    
+    func reload(old: [SearchResultProtocol], new: [SearchResultProtocol]) {
+        scene.children.flatMap { $0 as? MyNode }.forEach { node in
+            let remove = old.contains { $0.name == node.object.name }
+            if remove {
+                node.removeFromParent()
+            }
+        }
+        
+        for item in new {
+            let node = MyNode.make(title: item.name, image: UIImage(named: UIImage.all.randomItem), radius: 40, color: UIColor.all.randomItem)
+            node.object = item
+            scene.addChild(node)
+        }
     }
     
 }
@@ -56,13 +96,14 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let searchText = searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-//        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
-//            let predicate = NSPredicate(format: "self BEGINSWITH[c] %@", searchText)
-//            self.results = searchText.isEmpty ? self.users : self.users.lazy.filter { predicate.evaluate(with: $0) }
-//            DispatchQueue.main.async {
-//                
+//        let predicate = NSPredicate(format: "name BEGINSWITH[c] %@", searchText)
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
+//            self.filtered = searchText.isEmpty ? self.results : self.results.lazy.filter { predicate.evaluate(with: $0) }
+            self.filtered = searchText.isEmpty ? self.results : self.results.lazy.filter { $0.name.lowercased().hasPrefix(searchText.lowercased()) }
+//            DispatchQueue.main.async { [unowned self] in
+//                self.reload()
 //            }
-//        }
+        }
     }
     
 }
@@ -77,3 +118,33 @@ extension SearchViewController: UISearchBarDelegate {
 // get people (?q=paris) => paris hilton
 // get tags (?q=paris) => #paris
 // get places (?q=paris) => (Paris, France)
+
+class MyNode: Node {
+    
+    var object: SearchResultProtocol!
+    
+    override func removeFromParent() {
+        SKAction.fadeOut(withDuration: 0.2)
+        super.removeFromParent()
+    }
+    
+    override class func make(title: String?, image: UIImage?, radius: CGFloat, color: UIColor) -> MyNode {
+        let node = MyNode(circleOfRadius: radius)
+        node.physicsBody = {
+            let body = SKPhysicsBody(circleOfRadius: radius + 2)
+            body.allowsRotation = false
+            body.friction = 0
+            body.linearDamping = 2
+            return body
+        }()
+        node.fillColor = .black
+        node.strokeColor = .clear
+        _ = node.sprite
+        _ = node.title
+        node.title = title
+        node.image = image
+        node.color = color
+        return node
+    }
+    
+}

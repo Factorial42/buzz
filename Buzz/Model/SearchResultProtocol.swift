@@ -8,10 +8,16 @@
 
 import Foundation
 
-protocol SearchResultProtocol {}
+protocol SearchResultProtocol {
+    var name: String { get }
+}
 
 extension Location: SearchResultProtocol {}
 
 extension Tag: SearchResultProtocol {}
 
-extension User: SearchResultProtocol {}
+extension User: SearchResultProtocol {
+    var name: String {
+        return fullName
+    }
+}

@@ -179,21 +179,30 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jub-7t-pHG" customClass="SKView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="DFc-tv-b2P" secondAttribute="trailing" id="4wb-O4-de9"/>
                             <constraint firstItem="DFc-tv-b2P" firstAttribute="leading" secondItem="nht-Sm-s9V" secondAttribute="leading" id="9fE-w4-FWj"/>
+                            <constraint firstAttribute="trailing" secondItem="Jub-7t-pHG" secondAttribute="trailing" id="ML0-2Y-WYi"/>
+                            <constraint firstItem="Jub-7t-pHG" firstAttribute="leading" secondItem="nht-Sm-s9V" secondAttribute="leading" id="Qke-sP-dzH"/>
                             <constraint firstItem="DFc-tv-b2P" firstAttribute="top" secondItem="Mv8-FE-chW" secondAttribute="bottom" id="bdq-2Z-4eL"/>
+                            <constraint firstItem="yWN-qe-w3B" firstAttribute="top" secondItem="Jub-7t-pHG" secondAttribute="bottom" id="fUc-pn-biA"/>
+                            <constraint firstItem="Jub-7t-pHG" firstAttribute="top" secondItem="DFc-tv-b2P" secondAttribute="bottom" id="uKY-Ay-qgC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="DFc-tv-b2P" id="NH3-d4-NzJ"/>
+                        <outlet property="skView" destination="Jub-7t-pHG" id="5WZ-1c-nVS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCg-hG-O47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="36"/>
+            <point key="canvasLocation" x="1461.5999999999999" y="35.532233883058474"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gum-7P-Ple">
