@@ -204,6 +204,49 @@
             </objects>
             <point key="canvasLocation" x="1461.5999999999999" y="35.532233883058474"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="6hf-54-OKJ">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sDK-Pg-NKw" customClass="MapViewController" customModule="Buzz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8PC-cw-dDn"/>
+                        <viewControllerLayoutGuide type="bottom" id="hR3-Vq-c3T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gvl-yv-l9R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-Mv-hCK" customClass="TSClusterMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YKV-Cu-kc5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cjY-xt-ie3"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xaa-Mv-hCK" firstAttribute="top" secondItem="YKV-Cu-kc5" secondAttribute="bottom" id="A6f-Wc-5qK"/>
+                            <constraint firstItem="YKV-Cu-kc5" firstAttribute="top" secondItem="8PC-cw-dDn" secondAttribute="bottom" id="MIr-Ut-kqb"/>
+                            <constraint firstItem="hR3-Vq-c3T" firstAttribute="top" secondItem="Xaa-Mv-hCK" secondAttribute="bottom" id="Nfm-Nj-bMh"/>
+                            <constraint firstAttribute="trailing" secondItem="Xaa-Mv-hCK" secondAttribute="trailing" id="RaR-rK-fUz"/>
+                            <constraint firstItem="Xaa-Mv-hCK" firstAttribute="leading" secondItem="gvl-yv-l9R" secondAttribute="leading" id="dC7-xx-xlK"/>
+                            <constraint firstAttribute="trailing" secondItem="YKV-Cu-kc5" secondAttribute="trailing" id="fy6-fR-r3Q"/>
+                            <constraint firstItem="YKV-Cu-kc5" firstAttribute="leading" secondItem="gvl-yv-l9R" secondAttribute="leading" id="m38-6d-zKR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Xaa-Mv-hCK" id="qp1-AM-zvz"/>
+                        <outlet property="searchBar" destination="YKV-Cu-kc5" id="kov-99-gdK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTA-7L-m8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2245.5999999999999" y="35.532233883058474"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gum-7P-Ple">
             <objects>

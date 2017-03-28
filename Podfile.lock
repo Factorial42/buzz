@@ -13,6 +13,7 @@ PODS:
   - Player (0.5.0)
   - SCRecorder (2.7.0)
   - SwifterSwift (1.6.3)
+  - TSClusterMapView (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Magnetic (~> 1.0)
   - Player (~> 0.4)
   - SwifterSwift (~> 1.5)
+  - TSClusterMapView (~> 2.3)
 
 EXTERNAL SOURCES:
   HBRecorder:
@@ -47,7 +49,8 @@ SPEC CHECKSUMS:
   Player: 4cf2a2dabc2c3392b3d4d4d843554e40768c5a3e
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SwifterSwift: 76bf942a17769ebf8fb77f89138cbbd525c039c0
+  TSClusterMapView: 672b47a64ef9fb268a9093d80ba8b85ce2ee7afc
 
-PODFILE CHECKSUM: 8eb31c5ab6b1305392560d76e3c54833ae6eebb7
+PODFILE CHECKSUM: c588d7a14efa162e3e4863e10f7fd412c2ffc6cd
 
 COCOAPODS: 1.2.0
