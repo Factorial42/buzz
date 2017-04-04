@@ -18,12 +18,15 @@ class PlayerView: UIView {
         return player
     }()
     
+    var shouldPlay: ((Void) -> Bool)?
+    
 }
 
 // MARK: - PlayerDelegate
 extension PlayerView: PlayerDelegate {
     
     func playerReady(_ player: Player) {
+        guard shouldPlay?() ?? true else { return }
         player.playFromCurrentTime()
     }
     func playerPlaybackStateDidChange(_ player: Player) {}

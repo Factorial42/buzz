@@ -8,7 +8,7 @@ target 'Buzz' do
   # Pods for Buzz
   pod 'Fabric', '~> 1.6'
   pod 'Crashlytics', '~> 3.8'
-  pod 'Player', '~> 0.4'
+  pod 'Player', '~> 0.5'
   pod 'SwifterSwift', '~> 1.5'
   pod 'Fakery', '~> 2.0'
   pod 'Alamofire', '~> 4.3'
@@ -16,6 +16,5 @@ target 'Buzz' do
   pod 'GradientView', '~> 2.2'
   # pod 'HBRecorder', '~> 1.0'
   pod 'HBRecorder', :git => 'https://github.com/efremidze/HBRecorder.git'
-  pod 'Magnetic', '~> 1.0'
   pod 'TSClusterMapView', '~> 2.3'
 end

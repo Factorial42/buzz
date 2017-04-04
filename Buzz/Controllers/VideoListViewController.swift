@@ -8,12 +8,24 @@
 
 import UIKit
 
-class VideoListViewController: UIViewController {
+class VideoListViewController: ViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
 //    var videos: [Video]!
     let videos = Dummy.sharedInstance.makeVideos(5)
+    
+    override var _isVisible: Bool {
+        didSet {
+            collectionView.visibleCells.flatMap { $0 as? VideoCollectionViewCell }.forEach {
+                if _isVisible {
+                    $0.playerView.player.playFromCurrentTime()
+                } else {
+                    $0.playerView.player.pause()
+                }
+            }
+        }
+    }
     
 }
 
@@ -27,6 +39,7 @@ extension VideoListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: VideoCollectionViewCell.self), for: indexPath) as! VideoCollectionViewCell
         cell.configure(with: videos[indexPath.item])
+        cell.playerView.shouldPlay = { [unowned self] in self._isVisible }
         return cell
     }
     

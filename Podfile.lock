@@ -9,7 +9,6 @@ PODS:
   - GradientView (2.2.0)
   - HBRecorder (1.0.0):
     - SCRecorder
-  - Magnetic (1.0.1)
   - Player (0.5.0)
   - SCRecorder (2.7.0)
   - SwifterSwift (1.6.3)
@@ -23,7 +22,6 @@ DEPENDENCIES:
   - Fakery (~> 2.0)
   - GradientView (~> 2.2)
   - HBRecorder (from `https://github.com/efremidze/HBRecorder.git`)
-  - Magnetic (~> 1.0)
   - Player (~> 0.4)
   - SwifterSwift (~> 1.5)
   - TSClusterMapView (~> 2.3)
@@ -45,12 +43,11 @@ SPEC CHECKSUMS:
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   GradientView: a5397174594f158dc1511127f2004ec25c9d2300
   HBRecorder: 468bce6613d37e85bf88eb73e060fddce6fe31f5
-  Magnetic: ef8c4c9cf68c5e8d18986a4c3a7716b7ecf598ff
   Player: 4cf2a2dabc2c3392b3d4d4d843554e40768c5a3e
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SwifterSwift: 76bf942a17769ebf8fb77f89138cbbd525c039c0
   TSClusterMapView: 672b47a64ef9fb268a9093d80ba8b85ce2ee7afc
 
-PODFILE CHECKSUM: c588d7a14efa162e3e4863e10f7fd412c2ffc6cd
+PODFILE CHECKSUM: 625842001d573b36f212daea9779b4791267da9c
 
 COCOAPODS: 1.2.0

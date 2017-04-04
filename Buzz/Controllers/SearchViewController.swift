@@ -8,7 +8,6 @@
 
 import UIKit
 import SpriteKit
-import Magnetic
 
 class SearchViewController: UIViewController {
     
@@ -22,17 +21,15 @@ class SearchViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var skView: SKView! {
+    @IBOutlet weak var magneticView: MagneticView! {
         didSet {
-            _ = scene
+            magnetic.magneticDelegate = self
         }
     }
     
-    lazy var scene: Magnetic = { [unowned self] in
-        let scene = Magnetic(size: self.skView.bounds.size)
-        self.skView.presentScene(scene)
-        return scene
-    }()
+    var magnetic: Magnetic {
+        return magneticView.magnetic
+    }
     
     let results = Dummy.sharedInstance.makeSearchResults(5)
     var filtered = [SearchResultProtocol]() {
@@ -63,7 +60,7 @@ class SearchViewController: UIViewController {
 extension SearchViewController {
     
     func reload(old: [SearchResultProtocol], new: [SearchResultProtocol]) {
-        scene.children.flatMap { $0 as? MyNode }.forEach { node in
+        magnetic.children.flatMap { $0 as? MyNode }.forEach { node in
             let remove = old.contains { $0.name == node.object.name }
             if remove {
                 node.removeFromParent()
@@ -71,9 +68,9 @@ extension SearchViewController {
         }
         
         for item in new {
-            let node = MyNode.make(title: item.name, image: UIImage(named: UIImage.all.randomItem), radius: 40, color: UIColor.all.randomItem)
+            let node = MyNode(text: item.name, image: UIImage(named: UIImage.all.randomItem), color: UIColor.all.randomItem, radius: 40)
             node.object = item
-            scene.addChild(node)
+            magnetic.addChild(node)
         }
     }
     
@@ -108,6 +105,15 @@ extension SearchViewController: UISearchBarDelegate {
     
 }
 
+// MARK: - MagneticDelegate
+extension SearchViewController: MagneticDelegate {
+    func magnetic(_ magnetic: Magnetic, didSelect node: Node) {
+        
+    }
+    
+    func magnetic(_ magnetic: Magnetic, didDeselect node: Node) {}
+}
+
 // search
 // 1) top
 // 2) people
@@ -122,29 +128,5 @@ extension SearchViewController: UISearchBarDelegate {
 class MyNode: Node {
     
     var object: SearchResultProtocol!
-    
-    override func removeFromParent() {
-        SKAction.fadeOut(withDuration: 0.2)
-        super.removeFromParent()
-    }
-    
-    override class func make(title: String?, image: UIImage?, radius: CGFloat, color: UIColor) -> MyNode {
-        let node = MyNode(circleOfRadius: radius)
-        node.physicsBody = {
-            let body = SKPhysicsBody(circleOfRadius: radius + 2)
-            body.allowsRotation = false
-            body.friction = 0
-            body.linearDamping = 2
-            return body
-        }()
-        node.fillColor = .black
-        node.strokeColor = .clear
-        _ = node.sprite
-        _ = node.title
-        node.title = title
-        node.image = image
-        node.color = color
-        return node
-    }
     
 }
