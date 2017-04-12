@@ -14,7 +14,7 @@ public class MagneticView: SKView {
         let scene = Magnetic(size: self.bounds.size)
         self.presentScene(scene)
         return scene
-        }()
+    }()
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,8 +35,8 @@ public class MagneticView: SKView {
 }
 
 public protocol MagneticDelegate: class {
-    func magnetic(_ magnetic: Magnetic, didSelect node: Node)
-    func magnetic(_ magnetic: Magnetic, didDeselect node: Node)
+    func magnetic(_ magnetic: Magnetic, didSelect node: MagneticNode)
+    func magnetic(_ magnetic: Magnetic, didDeselect node: MagneticNode)
 }
 
 open class Magnetic: SKScene {
@@ -63,8 +63,8 @@ open class Magnetic: SKScene {
     /**
      The selected children.
      */
-    open var selectedChildren: [Node] {
-        return children.flatMap { $0 as? Node }.filter { $0.selected }
+    open var selectedChildren: [MagneticNode] {
+        return children.flatMap { $0 as? MagneticNode }.filter { $0.selected }
     }
     
     /**
@@ -102,7 +102,7 @@ open class Magnetic: SKScene {
     override open func atPoint(_ p: CGPoint) -> SKNode {
         var node = super.atPoint(p)
         while true {
-            if node is Node {
+            if node is MagneticNode {
                 return node
             } else if let parent = node.parent {
                 node = parent
@@ -139,7 +139,7 @@ extension Magnetic {
     }
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if !moving, let point = touches.first?.location(in: self), let node = atPoint(point) as? Node {
+        if !moving, let point = touches.first?.location(in: self), let node = atPoint(point) as? MagneticNode {
             if node.selected {
                 node.selected = false
                 magneticDelegate?.magnetic(self, didDeselect: node)
@@ -161,7 +161,7 @@ extension Magnetic {
     
 }
 
-open class Node: SKShapeNode {
+open class MagneticNode: SKShapeNode {
     
     lazy var mask: SKCropNode = { [unowned self] in
         let node = SKCropNode()

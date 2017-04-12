@@ -15,6 +15,7 @@
 		8B1820571E5D1867003B4EA4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1820561E5D1867003B4EA4 /* CameraViewController.swift */; };
 		8B1D35D61E944B8800622F59 /* MagneticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D35D51E944B8800622F59 /* MagneticView.swift */; };
 		8B1D35DA1E94562F00622F59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D35D91E94562F00622F59 /* ViewController.swift */; };
+		8B1D35DC1E94636E00622F59 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D35DB1E94636E00622F59 /* Data.swift */; };
 		8B5E43241E66241500161446 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E43231E66241500161446 /* Location.swift */; };
 		8B5E43261E66248B00161446 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E43251E66248B00161446 /* Tag.swift */; };
 		8B5E43281E66273800161446 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E43271E66273800161446 /* Comment.swift */; };
@@ -45,6 +46,7 @@
 		8B1820561E5D1867003B4EA4 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		8B1D35D51E944B8800622F59 /* MagneticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagneticView.swift; sourceTree = "<group>"; };
 		8B1D35D91E94562F00622F59 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B1D35DB1E94636E00622F59 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8B5E43231E66241500161446 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8B5E43251E66248B00161446 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		8B5E43271E66273800161446 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				8BEE35181E41116E00A09EEF /* User.swift */,
 				8BEE35161E41112500A09EEF /* Video.swift */,
 				8BDA41DC1E7000B80027FB47 /* SearchResultProtocol.swift */,
+				8B1D35DB1E94636E00622F59 /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				8B8F6AEC1E413E9F00F6C6CC /* UIStoryboardExtensions.swift in Sources */,
 				8B5E43281E66273800161446 /* Comment.swift in Sources */,
 				8BEEB4FD1E430408005DF7B8 /* Dummy.swift in Sources */,
+				8B1D35DC1E94636E00622F59 /* Data.swift in Sources */,
 				8B5E43261E66248B00161446 /* Tag.swift in Sources */,
 				8B1D35D61E944B8800622F59 /* MagneticView.swift in Sources */,
 				8BD4E7041E430C2E00974D4F /* VideoCollectionViewCell.swift in Sources */,

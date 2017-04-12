@@ -107,11 +107,11 @@ extension SearchViewController: UISearchBarDelegate {
 
 // MARK: - MagneticDelegate
 extension SearchViewController: MagneticDelegate {
-    func magnetic(_ magnetic: Magnetic, didSelect node: Node) {
-        
+    func magnetic(_ magnetic: Magnetic, didSelect node: MagneticNode) {
+        print(node)
     }
     
-    func magnetic(_ magnetic: Magnetic, didDeselect node: Node) {}
+    func magnetic(_ magnetic: Magnetic, didDeselect node: MagneticNode) {}
 }
 
 // search
@@ -125,7 +125,7 @@ extension SearchViewController: MagneticDelegate {
 // get tags (?q=paris) => #paris
 // get places (?q=paris) => (Paris, France)
 
-class MyNode: Node {
+class MyNode: MagneticNode {
     
     var object: SearchResultProtocol!
     
